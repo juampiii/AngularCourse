@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Welcome to your first form</h1>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Put your name in the box</label>
+
+        <input type="text"
+               class="form-control"
+               [(ngModel)]="username">
+
+        <small id="emailHelp" class="form-text text-muted" *ngIf="usernameHasValue()">You know that your name is <b>{{username}}</b> </small>
+      </div>
+      <button class="btn btn-primary" [disabled]="!usernameHasValue()" (click)="resetUsername()">Reset</button>
+    </div>
+  </div>
+</div>
+
